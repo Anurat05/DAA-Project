@@ -1,0 +1,46 @@
+body {
+  background-color: #0f0f0f;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+h1 {
+  margin: 20px;
+  color: cyan;
+}
+
+.controls {
+  margin: 20px;
+  padding: 10px;
+}
+
+button, select, input {
+  margin: 5px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid cyan;
+  background-color: #1e1e1e;
+  color: cyan;
+  transition: 0.3s;
+}
+
+button:hover, select:hover, input:hover {
+  background-color: cyan;
+  color: black;
+}
+
+.visualizer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 400px;
+  margin: 30px;
+}
+
+.bar {
+  width: 15px;
+  margin: 1px;
+  background-color: cyan;
+  transition: height 0.2s, background-color 0.2s;
+}

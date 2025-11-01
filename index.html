@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paradigm Playground</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Paradigm Playground</h1>
+
+  <div class="controls">
+    <select id="algorithm">
+      <option value="merge">Merge Sort (Divide & Conquer)</option>
+      <option value="greedy">Coin Change (Greedy)</option>
+      <option value="nqueens">N-Queens (Backtracking)</option>
+      <option value="tsp">TSP (Branch & Bound)</option>
+      <option value="knapsack">0/1 Knapsack (Dynamic Programming)</option>
+    </select>
+
+    <button id="startBtn">Start</button>
+    <button id="resetBtn">New / Reset</button>
+
+    <label>Speed:
+      <input type="range" id="speed" min="10" max="500" value="200">
+    </label>
+
+    <label>Array Size:
+      <input type="range" id="arraySize" min="5" max="50" value="20">
+    </label>
+
+    <div id="extraControls">
+      <!-- Dynamic extra inputs -->
+    </div>
+  </div>
+
+  <div id="visualizer" class="visualizer"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
