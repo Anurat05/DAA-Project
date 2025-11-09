@@ -137,7 +137,7 @@ async function runNQueens() {
   visualizer.innerHTML = '';
   const grid = document.createElement('div');
   grid.style.display = 'grid';
-  grid.style.gridTemplateColumns = `repeat(${n}, 40px)`;
+  grid.style.gridTemplateColumns = `repeat(${n}, 80px)`;
   grid.style.margin = 'auto';
   grid.style.width = `${n * 40}px`;
   visualizer.appendChild(grid);
@@ -145,8 +145,8 @@ async function runNQueens() {
   const cells = [];
   for (let i = 0; i < n * n; i++) {
     const cell = document.createElement('div');
-    cell.style.width = '40px';
-    cell.style.height = '40px';
+    cell.style.width = '80px';
+    cell.style.height = '80px';
     cell.style.border = '1px solid #333';
     cell.style.background = (Math.floor(i / n) + i) % 2 ? '#111' : '#333';
     grid.appendChild(cell);
@@ -322,3 +322,30 @@ window.onload = () => {
   generateArray();
   updateExtraControls();
 };
+// // ---------- Status panel helper ----------
+// function updateStatus({ action = '', range = '', depth = null, left = [], right = [], i = null, j = null, k = null } = {}) {
+//   const statusText = document.getElementById('statusText');
+//   const rangeText = document.getElementById('rangeText');
+//   const arraysText = document.getElementById('arraysText');
+//   const indicesText = document.getElementById('indicesText');
+
+//   if (statusText) statusText.innerHTML = `<span class="label">Status:</span> ${action}`;
+//   if (rangeText) rangeText.innerHTML = depth !== null
+//     ? `<span class="label">Range:</span> [${range}] &nbsp; <span class="small">Depth: ${depth}</span>`
+//     : `<span class="label">Range:</span> [${range}]`;
+
+//   if (arraysText) {
+//     // show left and right arrays as monospace boxes
+//     const leftHtml = `<div class="array-box"><strong>Left</strong><div>${left.length ? left.join(', ') : '[]'}</div></div>`;
+//     const rightHtml = `<div class="array-box"><strong>Right</strong><div>${right.length ? right.join(', ') : '[]'}</div></div>`;
+//     arraysText.innerHTML = `<div class="arrays-inline">${leftHtml}${rightHtml}</div>`;
+//   }
+
+//   if (indicesText) {
+//     const parts = [];
+//     if (i !== null) parts.push(`i=${i}`);
+//     if (j !== null) parts.push(`j=${j}`);
+//     if (k !== null) parts.push(`k=${k}`);
+//     indicesText.innerHTML = `<span class="label">Indices:</span> <span class="indices">${parts.join(' | ') || '-'}</span>`;
+//   }
+// }

@@ -34,7 +34,8 @@ button:hover, select:hover, input:hover {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  height: 400px;
+  /* width: 500px; */
+  height: 600px;
   margin: 30px;
 }
 
@@ -44,3 +45,22 @@ button:hover, select:hover, input:hover {
   background-color: cyan;
   transition: height 0.2s, background-color 0.2s;
 }
+/* ---------- status panel ----------
+.status-panel {
+  max-width: 1100px;
+  margin: 10px auto;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.03);
+  color: var(--text);
+  border-radius: 8px;
+  font-size: 13px;
+  text-align: left;
+  display: block;
+}
+.status-panel > div { margin: 4px 0; }
+.status-panel .label { color: var(--muted); font-weight:600; margin-right:8px; }
+.status-panel .small { color: var(--muted); font-size:12px; }
+.arrays-inline { display:flex; gap:12px; flex-wrap:wrap; align-items:flex-start; }
+.array-box { background: rgba(255,255,255,0.02); padding:6px 8px; border-radius:6px; border:1px solid rgba(255,255,255,0.03); font-family:monospace; font-size:13px; }
+.indices { font-family:monospace; } */
